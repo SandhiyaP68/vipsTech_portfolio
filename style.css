@@ -76,13 +76,13 @@
 
  .home{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
  }
+ text-align: left; 
 
  .home-img img{
     width:35vw ;
-    animation: floatImage 4s ease-in-out infinite;
  }
 
  @keyframes floatImage{
