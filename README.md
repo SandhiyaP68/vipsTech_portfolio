@@ -19,7 +19,7 @@ sudo git clone
 
 Windows:
 
-https://github.com/SandhiyaP68/vipsTech_portfolio.git
+https://github.com/SandhiyaP68/portfolio.git
 
 
 # License
