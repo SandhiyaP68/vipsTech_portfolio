@@ -23,4 +23,4 @@ https://github.com/SandhiyaP68/portfolio.git
 
 
 # License
-This project is free to use and does not contains any license.
+This project is free does not contains any license.
