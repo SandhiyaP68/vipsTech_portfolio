@@ -488,3 +488,51 @@
    margin-top: -10px;
    display: block;
 }
+
+/* Active / Click effect */
+.btn:active {
+    transform: scale(0.97); /* button shrinks slightly when clicked */
+    box-shadow: 0 0 0.5rem var(--main-color) inset; /* inner shadow for press feel */
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /* smooth effect */
+}
+
+
+#msg {
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* Visible states */
+#msg.sending,
+#msg.success,
+#msg.error {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Sending */
+#msg.sending {
+    background: #ffc107;
+    color: var(--second-bg-color);
+}
+
+/* Success */
+#msg.success {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+}
+
+/* Error */
+#msg.error {
+    background: #ff4d4d;
+    color: var(--second-bg-color);
+}
+
