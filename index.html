@@ -187,7 +187,7 @@ form.addEventListener('submit', e => {
     submitBtn.disabled = true;
 
     setTimeout(() => {
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        fetch(scriptURL, { method: 'POST', mode: 'no-cors',  body: new FormData(form) })
             .then(response => {
                 msg.innerHTML = "Your message has been sent.";
                 msg.className = "success"; // success style
@@ -196,7 +196,7 @@ form.addEventListener('submit', e => {
                 submitBtn.disabled = false;
             })
             .catch(error => {
-                msg.innerHTML = "Something went wrong!";
+                msg.innerHTML = "Something went wrong! Try again";
                 msg.className = "error"; // error style
                 setTimeout(() => msg.className = "", 2000); // hide after 1s
 
