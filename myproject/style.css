@@ -74,30 +74,38 @@
     display: none;
  }
 
+ 
+
  .home{
     display: flex;
-    justify-content: center;
-    align-items: center;
- }
+    justify-content: space-between;  /* push content left, image right */
+    align-items: center;             /* vertical center */
+    padding: 0 5%;                   /* optional spacing */
+}
 
- .home-img img{
-    width:35vw ;
-    animation: floatImage 4s ease-in-out infinite;
- }
+.home-content {
+    flex: 1;                         /* text takes remaining space */
+}
 
- @keyframes floatImage{
-   0%{
-      transform: translateY(0);
+.profile-img {
+  float: right;
+  margin-left: 20px;
+  width: 200px;
+}
 
-   }
-   50%{
-      transform: translateY(-22.4rem);
-   }
-   100%{
-      transform: translateY(0);
-   }
+/* For smaller screens */
+@media (max-width: 600px) {
+  .profile-img {
+    float: none;          /* remove float */
+    display: block;       /* make it a block element */
+    margin: 0 auto;       /* center horizontally */
+    width: 100%;          /* take full width */
+    max-width: 300px;     /* but don’t exceed 300px */
+  }
+}
 
- }
+
+
 
  .home-content h3 {
     font-size: 3.2rem;
